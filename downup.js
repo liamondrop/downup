@@ -24,38 +24,43 @@ NMMMM0o00000000000000000000MM0
 (function ($) {
   "use strict";
 
+
   /* basic constructor // add event listeners
    * ========================================== */
 
   var DownUp = function (el) {
         var $el = $(el);
         
-        $el.on('click', this.realize)
-           .on('annul', this.annul);
+        $el.on('click', this.actuate)
+           .on('du.reveal', this.reveal)
+           .on('du.conceal', this.conceal);
 
         // close any open dropdowns on click or 'esc'
         $('html').on('click keyup', function (e) {
           if ((e.type === 'keyup' && e.keyCode === 27) ||
                e.type === 'click') {
-            $el.trigger('annul');
+            $el.trigger('du.conceal');
           }
         });
       };
 
   DownUp.prototype = {
-    realize: function () {
+    actuate: function () {
       var $this = $(this),
-          $all = $("." + $this.attr('class')),
-          $others = $all.not($this),
-          $parent = $this.parent();
+          $others = $("." + $this.attr('class')).not($this),
+          duEvent = $this.parent().hasClass('du-reveal') ? 'du.conceal' : 'du.reveal';
 
-      $parent.toggleClass('du-open');
-      $others.trigger('annul');
+      $this.trigger(duEvent);
+      $others.trigger('du.conceal');
       return false;
     },
 
-    annul: function (e) {
-      $(e.target).parent().removeClass('du-open');
+    reveal: function (e) {
+      $(e.target).parent().addClass('du-reveal');
+    },
+
+    conceal: function (e) {
+      $(e.target).parent().removeClass('du-reveal');
     }
   };
 
@@ -63,14 +68,14 @@ NMMMM0o00000000000000000000MM0
    * ========================================== */
 
   $.fn.downup = function () {
-    var dds = this;
+    var dus = this;
 
-    return dds.each(function () {
+    return dus.each(function () {
       var $this = $(this),
-          dd = $this.data('dd');
+          du = $this.data('du');
 
       if (!du) {
-        $this.data('du', (du = new DownUp(this)));
+        $this.data('du', new DownUp(this));
       }
     });
   };
