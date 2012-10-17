@@ -63,11 +63,11 @@ NMMMM0o00000000000000000000MM0
    * ========================================== */
 
   $.fn.downup = function () {
-    var dds = this;
+    var dus = this;
 
-    return dds.each(function () {
+    return dus.each(function () {
       var $this = $(this),
-          dd = $this.data('dd');
+          du = $this.data('du');
 
       if (!du) {
         $this.data('du', (du = new DownUp(this)));
