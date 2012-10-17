@@ -3,11 +3,10 @@ downup.js
 
 A simple jQuery plugin to toggle a dropdown menu.
 
-Adds a `'du-open'` class to the parent element of  button.
-
+Adds a `'du-open'` class to the parent of the target element.
 Example usage:
 
-```javascript
+```html
 <html>
 	<head>DownUp Example</head>
 		<script src="/path/to/jquery.js"></script>
