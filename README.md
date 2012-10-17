@@ -11,11 +11,6 @@ Example usage:
 <html>
 	<head>
 		<title>DownUp Example</title>
-		<script src="/path/to/jquery.js"></script>
-		<script src="/path/to/downup.js"></script>
-		<script>
-			$('.target-element').downup();
-		</script>
 	</head>
 	<body>
 		<ul class="main-list">
@@ -31,6 +26,12 @@ Example usage:
 				</ul>
 			</li>
 		</ul>
+
+		<script src="/path/to/jquery.js"></script>
+		<script src="/path/to/downup.js"></script>
+		<script>
+			$('.target-element').downup();
+		</script>
 	</body>
 </html>
 ```
