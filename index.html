@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>downup.js by liamondrop</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>downup.js</h1>
+        <p>A simple jQuery plugin to toggle dropdown menus on a page.</p>
+
+        <p class="view"><a href="https://github.com/liamondrop/downup">View the Project on GitHub <small>liamondrop/downup</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/liamondrop/downup/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/liamondrop/downup/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/liamondrop/downup">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Toggles a <code>du-open</code> class on the parent of the target element. Actual dropdown behavior can then be controlled by CSS.</p>
+
+<p>Example usage:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>DownUp Example<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"main-list"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Main Item 1<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Main Item 2<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Main Item 3<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"target-element"</span><span class="nt">&gt;</span>More Info<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"hidden-list"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>Hidden Item 1<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>Hidden Item 2<span class="nt">&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>Hidden Item 3<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/path/to/jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/path/to/downup.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script&gt;</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">'.target-element'</span><span class="p">).</span><span class="nx">downup</span><span class="p">();</span>
+        <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<p>TODO: create example page</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/liamondrop">liamondrop</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
