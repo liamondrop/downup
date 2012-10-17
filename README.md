@@ -9,7 +9,8 @@ Example usage:
 
 ```html
 <html>
-	<head>DownUp Example</head>
+	<head>
+		<title>DownUp Example</title>
 		<script src="/path/to/jquery.js"></script>
 		<script src="/path/to/downup.js"></script>
 		<script>
