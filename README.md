@@ -14,14 +14,17 @@ Example usage:
 		<script src="/path/to/jquery.js"></script>
 		<script src="/path/to/downup.js"></script>
 		<script>
-			$('.dropdown-element').downup();
+			$('.target-element').downup();
 		</script>
 	</head>
 	<body>
-		<ul>
+		<ul class="main-list">
+			<li>Main Item 1</li>
+			<li>Main Item 2</li>
+			<li>Main Item 3</li>
 			<li>
-				<a href="#" class="dropdown-element">More Info</a>
-				<ul>
+				<a href="#" class="target-element">More Info</a>
+				<ul class="hidden-list">
 					<li>Hidden Item 1</li>
 					<li>Hidden Item 2</li>
 					<li>Hidden Item 3</li>
