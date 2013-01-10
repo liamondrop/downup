@@ -2,6 +2,8 @@
  * downup.js v0.0.1
  *
  * @author: liamondrop
+ * @url: https://github.com/liamondrop/downup
+ *
  *                          +MM0^
  *                          +MMMM1
  *                          0MMNMM+
